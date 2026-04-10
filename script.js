@@ -4,17 +4,23 @@ function generateQR() {
     const text = document.getElementById("text").value;
 
     if (!text) {
-        alert("Enter something!");
+        alert("Please enter something!");
         return;
     }
 
-    document.getElementById("qrcode").innerHTML = "";
+    const qrContainer = document.getElementById("qrcode");
+    qrContainer.innerHTML = "";
 
-    qr = new QRCode(document.getElementById("qrcode"), {
+    qr = new QRCode(qrContainer, {
         text: text,
         width: 200,
         height: 200
     });
+
+    qrContainer.style.opacity = "0";
+    setTimeout(() => {
+        qrContainer.style.opacity = "1";
+    }, 100);
 }
 
 function downloadQR() {
