@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Generator Pro</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <!-- QR Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 
 <body>
 
-<div class="container">
-    <h2>QR Code Generator</h2>
+<div class="bg"></div>
 
-    <input type="text" id="text" placeholder="Enter text or URL">
+<div class="app">
+    <h1>QR Generator</h1>
+    <p class="subtitle">Create beautiful QR codes instantly</p>
 
-    <div class="buttons">
+    <input type="text" id="text" placeholder="Enter text or URL...">
+
+    <div class="controls">
         <button onclick="generateQR()">Generate</button>
         <button onclick="downloadQR()">Download</button>
     </div>
 
-    <div id="qrcode"></div>
+    <div class="qr-box">
+        <div id="qrcode"></div>
+    </div>
 </div>
 
-<!-- JS -->
 <script src="script.js"></script>
-
 </body>
 </html>
